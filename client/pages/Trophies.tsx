@@ -1,8 +1,13 @@
 import { ChevronDown } from "lucide-react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Trophies = () => {
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const navigate = useNavigate();
+
   const products = [
     {
       id: 1,
@@ -74,45 +79,130 @@ const Trophies = () => {
           <div className="space-y-0">
             {/* Apparel Category */}
             <div className="bg-[#FFF4DF] shadow-[0px_0px_16px_rgba(0,0,0,0.25)]">
-              <div className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF]">
-                <span className="text-black font-poppins text-xl">Apparel</span>
-                <ChevronDown className="w-9 h-9 text-black" />
+              <div
+                className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
+                onClick={() =>
+                  setOpenDropdown(openDropdown === "Apparel" ? null : "Apparel")
+                }
+              >
+                <span
+                  className="text-black font-poppins text-xl cursor-pointer hover:underline"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/apparel");
+                  }}
+                >
+                  Apparel
+                </span>
+                <ChevronDown
+                  className={`w-9 h-9 text-black transition-transform ${
+                    openDropdown === "Apparel" ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </div>
+              {openDropdown === "Apparel" && (
+                <>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      T-Shirts
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Hoodies
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Polo Shirts
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Trophy & Memento Category */}
             <div className="bg-[#FFF4DF]">
-              <div className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF]">
+              <div
+                className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
+                onClick={() =>
+                  setOpenDropdown(openDropdown === "Trophy" ? null : "Trophy")
+                }
+              >
                 <span className="text-black font-poppins text-xl">
                   Trophy & Memento
                 </span>
-                <ChevronDown className="w-9 h-9 text-black" />
+                <ChevronDown
+                  className={`w-9 h-9 text-black transition-transform ${
+                    openDropdown === "Trophy" ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </div>
-              <div className="bg-[#FFF4DF] px-14 py-3">
-                <span className="text-black font-poppins text-lg font-light">
-                  Glass Trophies
-                </span>
-              </div>
-              <div className="bg-[#FFF4DF] px-14 py-3">
-                <span className="text-black font-poppins text-lg font-light">
-                  Metal Awards
-                </span>
-              </div>
-              <div className="bg-[#FFF4DF] px-14 py-3">
-                <span className="text-black font-poppins text-lg font-light">
-                  Crystal Awards
-                </span>
-              </div>
+              {openDropdown === "Trophy" && (
+                <>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Glass Trophies
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Metal Awards
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Crystal Awards
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Accessories Category */}
             <div className="bg-[#FFF4DF]">
-              <div className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF]">
-                <span className="text-black font-poppins text-xl">
+              <div
+                className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
+                onClick={() =>
+                  setOpenDropdown(
+                    openDropdown === "Accessories" ? null : "Accessories",
+                  )
+                }
+              >
+                <span
+                  className="text-black font-poppins text-xl cursor-pointer hover:underline"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/accessories");
+                  }}
+                >
                   Accessories
                 </span>
-                <ChevronDown className="w-9 h-9 text-black" />
+                <ChevronDown
+                  className={`w-9 h-9 text-black transition-transform ${
+                    openDropdown === "Accessories" ? "rotate-180" : "rotate-0"
+                  }`}
+                />
               </div>
+              {openDropdown === "Accessories" && (
+                <>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Notebooks
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Mugs
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Stationery
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </aside>
@@ -137,16 +227,16 @@ const Trophies = () => {
                     <img
                       src={product.image}
                       alt={product.title}
-                      className="max-w-full max-h-full object-contain"
+                      className="w-full h-full object-cover rounded-t-2xl"
                     />
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-black font-inter text-xl font-medium mb-2">
-                      {product.title}
-                    </h3>
-                    <p className="text-black font-inter text-xl font-semibold">
-                      {product.price}
-                    </p>
+                  <div className="p-4 flex flex-col items-center justify-center">
+                    <span className="text-gray-400 font-inter text-xl font-medium mb-2">
+                      Product Name
+                    </span>
+                    <span className="text-gray-300 font-inter text-xl font-semibold">
+                      Price
+                    </span>
                   </div>
                 </div>
               ))}

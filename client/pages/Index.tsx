@@ -2,26 +2,31 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { HeroSection } from "../components/HeroSection";
+import mainFirstHeroSection from "../assets/main first hero section.png";
+import heroSection1 from "../assets/Hero section 1.png";
+import heroSection2 from "../assets/hero section 2.png";
+import heroSection3 from "../assets/hero section 3.png";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroImages = [
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F52fd867c21604794a316589da1784a08%2F81b43010a8234ee79b2db0ff5c410e60?format=webp&width=800",
+      src: mainFirstHeroSection,
       alt: "Main Hero Section - Lifestyle Apparel",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F52fd867c21604794a316589da1784a08%2F09033aa6789f48c6b928d265f6de4774?format=webp&width=800",
-      alt: "Cap Accessories",
+      src: heroSection1,
+      alt: "Hero Section 1",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F52fd867c21604794a316589da1784a08%2Ff26c16ab85c04d38a50c51502a464543?format=webp&width=800",
-      alt: "Trophy Momento",
+      src: heroSection2,
+      alt: "Hero Section 2",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets%2F52fd867c21604794a316589da1784a08%2F566a1f7fb5a4402bbe904a7bab223c89?format=webp&width=800",
-      alt: "Business Apparel",
+      src: heroSection3,
+      alt: "Hero Section 3",
     },
   ];
 
@@ -76,43 +81,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-[54px] bg-[#FFF4DF]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-[118px]">
-          <div className="flex items-center gap-8 lg:gap-16">
-            <div className="flex-1 max-w-[493px]">
-              <h2 className="text-[#1C1C1E] font-inter text-4xl lg:text-[64px] font-bold leading-tight mb-3">
-                TRENDYDICE
-              </h2>
-              <p className="text-[#232323] font-poppins text-[15px] leading-[1.64] mb-8">
-                Trendydice is a B2B print-on-demand and dropshipping partner,
-                connecting manufacturers with businesses for scalable,
-                high-quality customized merchandise solutions. We power your
-                brand's success with reliable, tech-driven apparel and gifting
-                services tailored for events, institutions, and creators
-              </p>
-
-              <div className="space-y-4">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-28 py-3 bg-gradient-to-r from-black to-[#211278] text-white font-poppins text-base rounded-2xl shadow-[0px_0px_16px_rgba(0,0,0,0.40)] hover:shadow-lg transition-all"
-                >
-                  Personalized Fest & Event Merchandise
-                </Link>
-                <div className="block">
-                  <Link
-                    to="/apparel"
-                    className="inline-flex items-center justify-center px-28 py-3 bg-gradient-to-r from-black to-[#211278] text-white font-poppins text-base rounded-2xl shadow-[0px_0px_16px_rgba(0,0,0,0.40)] hover:shadow-lg transition-all"
-                  >
-                    Product Category
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex-1"></div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* Customized Event Partnerships */}
       <section className="py-16 bg-[#FFF4DF]">
@@ -159,23 +128,23 @@ const Index = () => {
 
       {/* Categories */}
       <section className="py-16 bg-[#FFF4DF]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-[157px]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[157px]">
           <div className="text-center mb-14">
             <h2 className="text-black font-poppins text-3xl lg:text-[48px] font-normal">
               CATEGORIES
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-[595px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:h-[595px]">
             {/* Apparels */}
             <Link
               to="/apparel"
-              className="relative rounded-lg overflow-hidden bg-gradient-to-b from-[#EEEDED] to-[#999] group hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0px_20px_40px_rgba(0,0,0,0.4)]"
+              className="relative rounded-lg overflow-hidden bg-gradient-to-b from-[#EEEDED] to-[#999] group hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0px_20px_40px_rgba(0,0,0,0.4)] min-h-[250px]"
             >
               <img
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/903de070062f40ddd5b660f87b28e869cec326ef?width=1228"
                 alt="Apparels"
-                className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+                className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110 min-h-[250px]"
               />
               <div className="absolute bottom-6 left-6">
                 <h3 className="text-white font-poppins text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
@@ -188,12 +157,12 @@ const Index = () => {
               {/* Trophies & Momentos */}
               <Link
                 to="/trophies"
-                className="relative rounded-lg overflow-hidden bg-gradient-to-b from-[#EEEDED] to-[#999] group hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0px_20px_40px_rgba(0,0,0,0.4)]"
+                className="relative rounded-lg overflow-hidden bg-gradient-to-b from-[#EEEDED] to-[#999] group hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0px_20px_40px_rgba(0,0,0,0.4)] min-h-[120px]"
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8a718c15c641f07cae8d31565fea6a33bf08dba?width=936"
                   alt="Trophies & Momentos"
-                  className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110 min-h-[120px]"
                 />
                 <div className="absolute bottom-4 left-4">
                   <h3 className="text-white font-poppins text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
@@ -205,12 +174,12 @@ const Index = () => {
               {/* Accessories */}
               <Link
                 to="/accessories"
-                className="relative rounded-lg overflow-hidden bg-gradient-to-b from-[#EEEDED] to-[#999] group hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0px_20px_40px_rgba(0,0,0,0.4)]"
+                className="relative rounded-lg overflow-hidden bg-gradient-to-b from-[#EEEDED] to-[#999] group hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-[0px_20px_40px_rgba(0,0,0,0.4)] min-h-[120px]"
               >
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/600e7bf937ee57b2ddb76555de8ad6351d66df24?width=936"
                   alt="Accessories"
-                  className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110"
+                  className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110 min-h-[120px]"
                 />
                 <div className="absolute bottom-4 left-5">
                   <h3 className="text-white font-poppins text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">

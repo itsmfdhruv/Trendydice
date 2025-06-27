@@ -1,8 +1,13 @@
+import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
 const Accessories = () => {
+  const navigate = useNavigate();
+  const [openDropdown, setOpenDropdown] = useState<null | string>(null);
+
   const products = [
     {
       id: 1,
@@ -43,16 +48,11 @@ const Accessories = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[395px] bg-gradient-to-b from-[#4B4E55] via-[#66686D] to-[#B4A696] overflow-hidden">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/ded6fbb020203a642d062c750e54e14a1e1ee706?width=2880"
-          alt="Accessories Background"
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        />
+      <section className="relative h-[395px] bg-gradient-to-b from-[#4B4E55] via-[#66686D] to-[#B4A696] overflow-hidden flex items-center justify-center">
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/283de88197cb24f69dcbe1739e270c8b0af4a0aa?width=762"
           alt="Accessories Hero"
-          className="absolute left-[530px] top-[71px] w-[381px] h-[254px]"
+          className="w-[350px] h-[350px] object-cover rounded-lg transition-transform duration-500 hover:scale-105 z-10 relative"
         />
       </section>
 
@@ -62,45 +62,122 @@ const Accessories = () => {
           <div className="space-y-0">
             {/* Apparel Category */}
             <div className="bg-[#FFF4DF] shadow-[0px_0px_16px_rgba(0,0,0,0.25)]">
-              <div className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF]">
-                <span className="text-black font-poppins text-xl">Apparel</span>
-                <ChevronDown className="w-9 h-9 text-black" />
+              <div
+                className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
+                onClick={() =>
+                  setOpenDropdown(openDropdown === "Apparel" ? null : "Apparel")
+                }
+              >
+                <span
+                  className="text-black font-poppins text-xl cursor-pointer hover:underline"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/apparel");
+                  }}
+                >
+                  Apparel
+                </span>
+                <ChevronDown
+                  className={`w-9 h-9 text-black transition-transform ${openDropdown === "Apparel" ? "rotate-180" : "rotate-0"}`}
+                />
               </div>
+              {openDropdown === "Apparel" && (
+                <>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      T-Shirts
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Hoodies
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Polo Shirts
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
-
             {/* Trophy & Memento Category */}
             <div className="bg-[#FFF4DF]">
-              <div className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF]">
-                <span className="text-black font-poppins text-xl">
+              <div
+                className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
+                onClick={() =>
+                  setOpenDropdown(openDropdown === "Trophy" ? null : "Trophy")
+                }
+              >
+                <span
+                  className="text-black font-poppins text-xl cursor-pointer hover:underline"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    navigate("/trophies");
+                  }}
+                >
                   Trophy & Memento
                 </span>
-                <ChevronDown className="w-9 h-9 text-black" />
+                <ChevronDown
+                  className={`w-9 h-9 text-black transition-transform ${openDropdown === "Trophy" ? "rotate-180" : "rotate-0"}`}
+                />
               </div>
+              {openDropdown === "Trophy" && (
+                <>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Glass Trophies
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Metal Awards
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Crystal Awards
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
-
             {/* Accessories Category */}
             <div className="bg-[#FFF4DF]">
-              <div className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF]">
+              <div
+                className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
+                onClick={() =>
+                  setOpenDropdown(
+                    openDropdown === "Accessories" ? null : "Accessories",
+                  )
+                }
+              >
                 <span className="text-black font-poppins text-xl">
                   Accessories
                 </span>
-                <ChevronDown className="w-9 h-9 text-black" />
+                <ChevronDown
+                  className={`w-9 h-9 text-black transition-transform ${openDropdown === "Accessories" ? "rotate-180" : "rotate-0"}`}
+                />
               </div>
-              <div className="bg-[#FFF4DF] px-14 py-3">
-                <span className="text-black font-poppins text-lg font-light">
-                  Notebooks
-                </span>
-              </div>
-              <div className="bg-[#FFF4DF] px-14 py-3">
-                <span className="text-black font-poppins text-lg font-light">
-                  Mugs
-                </span>
-              </div>
-              <div className="bg-[#FFF4DF] px-14 py-3">
-                <span className="text-black font-poppins text-lg font-light">
-                  Stationery
-                </span>
-              </div>
+              {openDropdown === "Accessories" && (
+                <>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Notebooks
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Mugs
+                    </span>
+                  </div>
+                  <div className="bg-[#FFF4DF] px-14 py-3">
+                    <span className="text-black font-poppins text-lg font-light">
+                      Stationery
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </aside>
@@ -125,16 +202,16 @@ const Accessories = () => {
                     <img
                       src={product.image}
                       alt={product.title}
-                      className="max-w-full max-h-full object-contain"
+                      className="w-full h-full object-cover rounded-t-2xl"
                     />
                   </div>
-                  <div className="p-4">
-                    <h3 className="text-black font-inter text-xl font-medium mb-2">
-                      {product.title}
-                    </h3>
-                    <p className="text-black font-inter text-xl font-semibold">
-                      {product.price}
-                    </p>
+                  <div className="p-4 flex flex-col items-center justify-center">
+                    <span className="text-gray-400 font-inter text-xl font-medium mb-2">
+                      Product Name
+                    </span>
+                    <span className="text-gray-300 font-inter text-xl font-semibold">
+                      Price
+                    </span>
                   </div>
                 </div>
               ))}
