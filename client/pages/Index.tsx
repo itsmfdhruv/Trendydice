@@ -47,7 +47,7 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[665px] overflow-hidden">
+      <section className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-[665px] overflow-hidden">
         {/* Hero Product Carousel */}
         <div className="relative w-full h-full">
           <div
@@ -59,7 +59,14 @@ const Index = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    height: "100%",
+                    width: "100%",
+                    minHeight: "350px",
+                  }}
                 />
               </div>
             ))}
@@ -67,7 +74,7 @@ const Index = () => {
         </div>
 
         {/* Navigation Dots */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
           {heroImages.map((_, index) => (
             <button
               key={index}

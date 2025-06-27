@@ -15,9 +15,9 @@ export const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-8 py-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-10 sm:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content - Slides in from left */}
           <div
             className={`space-y-8 transition-all duration-1000 ease-out ${
@@ -27,11 +27,11 @@ export const HeroSection: React.FC = () => {
             }`}
           >
             <div className="space-y-6">
-              <h1 className="text-6xl lg:text-7xl font-bold text-[#1c1c1e] font-poppins leading-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1c1c1e] font-poppins leading-tight text-center lg:text-left">
                 TRENDYDICE
               </h1>
 
-              <p className="text-[#232222] text-lg font-light font-poppins leading-relaxed max-w-lg">
+              <p className="text-[#232222] text-base sm:text-lg font-light font-poppins leading-relaxed max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
                 Trendydice is a B2B print-on-demand and dropshipping partner,
                 connecting manufacturers with businesses for scalable,
                 high-quality customized merchandise solutions.
@@ -43,7 +43,7 @@ export const HeroSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-4 flex flex-col items-center lg:items-start">
               <Button className="w-full max-w-md h-12 rounded-2xl bg-gradient-to-r from-black to-[#211278] hover:from-gray-800 hover:to-[#1a0f60] text-white font-poppins text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 Personalized Fest & Event Merchandise
               </Button>
@@ -65,7 +65,7 @@ export const HeroSection: React.FC = () => {
             <img
               src={aboutUsImage}
               alt="Trendy hoodie merchandise"
-              className="w-80 lg:w-96 h-auto object-cover rounded-lg transition-transform duration-500 hover:scale-105"
+              className="w-60 sm:w-72 md:w-80 lg:w-96 h-auto object-cover rounded-lg transition-transform duration-500 hover:scale-105"
             />
           </div>
         </div>
