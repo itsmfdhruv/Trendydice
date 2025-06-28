@@ -94,7 +94,7 @@ const Index = () => {
       <section className="py-16 bg-[#FFF4DF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-[133px]">
           <div className="text-center mb-11">
-            <h2 className="text-black font-poppins text-3xl lg:text-[48px] font-normal max-w-[808px] mx-auto">
+            <h2 className="text-black font-poppins text-2xl sm:text-3xl lg:text-[48px] font-normal max-w-[808px] mx-auto leading-tight">
               CUSTOMISED EVENT PARTNERSHIPS
             </h2>
           </div>
@@ -110,10 +110,10 @@ const Index = () => {
 
             <div className="flex-1 space-y-20">
               <div className="space-y-3">
-                <h3 className="text-black font-poppins text-xl">
+                <h3 className="text-black font-poppins text-lg sm:text-xl">
                   Personalized Fest & Event Merchandise
                 </h3>
-                <p className="text-black font-poppins text-xl font-light leading-normal text-justify">
+                <p className="text-black font-poppins text-base sm:text-lg md:text-xl font-light leading-normal text-justify">
                   Empower your college fest or event with Trendydice's
                   customized merchandise solutions—crafted to your exact needs.
                   From apparel to trophies and accessories, we deliver
@@ -137,7 +137,7 @@ const Index = () => {
       <section className="py-16 bg-[#FFF4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[157px]">
           <div className="text-center mb-14">
-            <h2 className="text-black font-poppins text-3xl lg:text-[48px] font-normal">
+            <h2 className="text-black font-poppins text-2xl sm:text-3xl lg:text-[48px] font-normal">
               CATEGORIES
             </h2>
           </div>
@@ -154,7 +154,7 @@ const Index = () => {
                 className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110 min-h-[250px]"
               />
               <div className="absolute bottom-6 left-6">
-                <h3 className="text-white font-poppins text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
+                <h3 className="text-white font-poppins text-lg sm:text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
                   Appearels
                 </h3>
               </div>
@@ -172,7 +172,7 @@ const Index = () => {
                   className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110 min-h-[120px]"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-poppins text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
+                  <h3 className="text-white font-poppins text-lg sm:text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
                     Trophies & Momentos
                   </h3>
                 </div>
@@ -189,7 +189,7 @@ const Index = () => {
                   className="w-full h-full object-cover transition-all duration-300 ease-in-out group-hover:scale-110 min-h-[120px]"
                 />
                 <div className="absolute bottom-4 left-5">
-                  <h3 className="text-white font-poppins text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
+                  <h3 className="text-white font-poppins text-lg sm:text-2xl lg:text-[32px] font-medium transition-all duration-300 ease-in-out group-hover:text-shadow-lg drop-shadow-[2px_2px_8px_rgba(0,0,0,0.8)]">
                     Accessories
                   </h3>
                 </div>
@@ -203,7 +203,7 @@ const Index = () => {
       <section className="py-16 bg-[#FFF4DF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-[174px]">
           <div className="text-center mb-20">
-            <h2 className="text-black font-poppins text-3xl lg:text-[48px] font-normal">
+            <h2 className="text-black font-poppins text-2xl sm:text-3xl lg:text-[48px] font-normal">
               PAST PARTNERS
             </h2>
           </div>
@@ -217,7 +217,7 @@ const Index = () => {
                   alt="IIT Guwahati"
                   className="w-[156px] h-[152px] object-contain mx-auto mb-10"
                 />
-                <h3 className="text-black font-poppins text-xl font-semibold">
+                <h3 className="text-black font-poppins text-base sm:text-lg md:text-xl font-semibold">
                   IIT GUWAHATI
                 </h3>
               </div>
@@ -228,7 +228,7 @@ const Index = () => {
                   alt="IIT Patna"
                   className="w-[170px] h-[158px] object-contain mx-auto mb-10"
                 />
-                <h3 className="text-black font-poppins text-xl font-semibold">
+                <h3 className="text-black font-poppins text-base sm:text-lg md:text-xl font-semibold">
                   IIT PATNA
                 </h3>
               </div>
@@ -239,7 +239,7 @@ const Index = () => {
                   alt="OYO"
                   className="w-[158px] h-[151px] object-contain mx-auto mb-10"
                 />
-                <h3 className="text-black font-poppins text-xl font-semibold">
+                <h3 className="text-black font-poppins text-base sm:text-lg md:text-xl font-semibold">
                   OYO
                 </h3>
               </div>
@@ -250,7 +250,7 @@ const Index = () => {
                   alt="Campus Groups"
                   className="w-[169px] h-[163px] object-contain mx-auto mb-10"
                 />
-                <h3 className="text-black font-poppins text-xl font-semibold">
+                <h3 className="text-black font-poppins text-base sm:text-lg md:text-xl font-semibold">
                   CAMPUS GROUPS
                 </h3>
               </div>
@@ -264,7 +264,7 @@ const Index = () => {
                   alt="IIT Guwahati Research"
                   className="w-[246px] h-[146px] object-contain mx-auto mb-16"
                 />
-                <h3 className="text-black font-poppins text-xl font-semibold">
+                <h3 className="text-black font-poppins text-base sm:text-lg md:text-xl font-semibold">
                   IIT GUWAHATI
                 </h3>
               </div>
@@ -275,7 +275,7 @@ const Index = () => {
                   alt="IIT Alumni Cell"
                   className="w-[156px] h-[168px] object-contain mx-auto mb-10"
                 />
-                <h3 className="text-black font-poppins text-xl font-semibold">
+                <h3 className="text-black font-poppins text-base sm:text-lg md:text-xl font-semibold">
                   IIT ALUMNI CELL
                 </h3>
               </div>
@@ -286,7 +286,7 @@ const Index = () => {
                   alt="ISM Patna"
                   className="w-[438px] h-[144px] object-contain mx-auto mb-14"
                 />
-                <h3 className="text-black font-poppins text-xl font-semibold">
+                <h3 className="text-black font-poppins text-base sm:text-lg md:text-xl font-semibold">
                   ISM PATNA
                 </h3>
               </div>
@@ -299,7 +299,7 @@ const Index = () => {
       <section className="py-16 bg-[#FFF4DF]">
         <div className="max-w-6xl mx-auto px-6 lg:px-[146px]">
           <div className="text-center mb-4">
-            <h2 className="text-black font-poppins text-3xl lg:text-[48px] font-normal">
+            <h2 className="text-black font-poppins text-2xl sm:text-3xl lg:text-[48px] font-normal">
               FAQ's
             </h2>
           </div>
