@@ -14,6 +14,14 @@ export const HeroSection: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Scroll and focus helpers for landing page navigation
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 py-10 sm:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
@@ -44,11 +52,17 @@ export const HeroSection: React.FC = () => {
             </div>
 
             <div className="space-y-4 flex flex-col items-center lg:items-start">
-              <Button className="w-full max-w-md h-12 rounded-2xl bg-gradient-to-r from-black to-[#211278] hover:from-gray-800 hover:to-[#1a0f60] text-white font-poppins text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Button
+                className="w-full max-w-md h-12 rounded-2xl bg-gradient-to-r from-black to-[#211278] hover:from-gray-800 hover:to-[#1a0f60] text-white font-poppins text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                onClick={() => scrollToSection("customized-event-partnerships")}
+              >
                 Personalized Fest & Event Merchandise
               </Button>
 
-              <Button className="w-full max-w-md h-12 rounded-2xl bg-gradient-to-r from-black to-[#211278] hover:from-gray-800 hover:to-[#1a0f60] text-white font-poppins text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <Button
+                className="w-full max-w-md h-12 rounded-2xl bg-gradient-to-r from-black to-[#211278] hover:from-gray-800 hover:to-[#1a0f60] text-white font-poppins text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                onClick={() => scrollToSection("categories-section")}
+              >
                 Product Category
               </Button>
             </div>

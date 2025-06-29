@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import teamPhoto from "../assets/team-photo.png"; // Import the team photo from assets
+import memories from "../assets/memories.png"; // Import the new image for the right side
 
 const About = () => {
   return (
@@ -35,11 +37,13 @@ const About = () => {
       <section className="py-16 bg-[#FFF4DF]">
         <div className="max-w-7xl mx-auto px-6 lg:px-[121px]">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[73px]">
-            {/* Image Collage */}
-            <div className="relative w-[618px] h-[359px]">
-              <div className="absolute top-0 right-0 w-[309px] h-[292px] bg-[#D9D9D9]"></div>
-              <div className="absolute bottom-0 left-[57px] w-[238px] h-[168px] bg-[#D9D9D9]"></div>
-              <div className="absolute top-[38px] left-0 w-[289px] h-[130px] bg-[#D9D9D9]"></div>
+            {/* Team Photo - replaces placeholder collage */}
+            <div className="w-full lg:w-[618px] flex justify-center mb-8 lg:mb-0">
+              <img
+                src={teamPhoto}
+                alt="Trendydice Team"
+                className="rounded-lg shadow-lg object-cover w-full max-w-[618px] h-auto"
+              />
             </div>
 
             {/* Content */}
@@ -77,8 +81,14 @@ const About = () => {
               </p>
             </div>
 
-            {/* Placeholder Image */}
-            <div className="w-[468px] h-[328px] bg-[#D9D9D9]"></div>
+            {/* Memories Image */}
+            <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+              <img
+                src={memories}
+                alt="Trendydice Memories"
+                className="rounded-lg shadow-lg object-cover w-full max-w-md h-auto"
+              />
+            </div>
           </div>
 
           <div className="mt-9 text-center">

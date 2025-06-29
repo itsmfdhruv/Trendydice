@@ -43,21 +43,25 @@ const Footer = () => {
               <Link
                 to="/"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Home
               </Link>
               <Link
                 to="/about"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 About us
               </Link>
               <Link
                 to="/contact"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Contact us
               </Link>
+              {/*
               <Link
                 to="/cart"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
@@ -76,11 +80,29 @@ const Footer = () => {
               >
                 Pricing
               </Link>
-              <Link
-                to="/faqs"
+              */}
+              <a
+                href="/#faqs-section"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+                onClick={e => {
+                  e.preventDefault();
+                  if (window.location.pathname === "/") {
+                    const faqSection = document.getElementById("faqs-section");
+                    if (faqSection) {
+                      faqSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  } else {
+                    window.location.href = "/#faqs-section";
+                  }
+                }}
               >
                 FAQ's
+              </a>
+              <Link
+                to="/terms-and-conditions"
+                className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+              >
+                Terms & Conditions
               </Link>
             </div>
           </div>
@@ -94,18 +116,21 @@ const Footer = () => {
               <Link
                 to="/apparel"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Apparels
               </Link>
               <Link
                 to="/trophies"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Trophies
               </Link>
               <Link
                 to="/accessories"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 Accessories
               </Link>
@@ -116,19 +141,13 @@ const Footer = () => {
               </h4>
               <div className="space-y-1">
                 <Link
-                  to="/privacy"
+                  to="/delivery-and-billing"
                   className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
                 >
-                  Privacy Policy
+                  Delivery and Billing Information
                 </Link>
                 <Link
-                  to="/refund"
-                  className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
-                >
-                  Refund Policy
-                </Link>
-                <Link
-                  to="/terms"
+                  to="/terms-and-conditions"
                   className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
                 >
                   Terms & Conditions
@@ -197,12 +216,48 @@ const Footer = () => {
               Follow us
             </h3>
             <div className="flex items-center gap-3 flex-wrap">
-              <Facebook className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
-              <Twitter className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
-              <Instagram className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
-              <Linkedin className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
-              <MessageCircle className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
-              <Youtube className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
+              <a
+                href="https://www.facebook.com/trendydice"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
+              </a>
+              <a
+                href="https://x.com/TrendyDice"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
+              </a>
+              <a
+                href="https://www.instagram.com/Trendydice"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/trendydice"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
+              </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=9738097381&text&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
+              </a>
+              <a
+                href="https://www.youtube.com/@trendydice"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube className="w-5 h-5 text-black hover:text-[#211278] transition-colors cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>

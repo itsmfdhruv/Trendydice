@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
@@ -11,32 +10,32 @@ const Accessories = () => {
   const products = [
     {
       id: 1,
-      title: "Notebook Set",
-      price: "₹499",
+      title: "Gifting Kits",
+      price: "₹590",
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/dfb2df7a6187beacfa72ee828264aacaf191e71a?width=414",
       gradient: "from-[#F3B1A8] to-[#828CC6]",
     },
     {
       id: 2,
-      title: "Coffee Mug",
-      price: "₹299",
+      title: "Keychains",
+      price: "₹50",
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/e9a6c439d981a1c86ddb9e30f7bc137ab14de27e?width=667",
       gradient: "from-[#F3B1A8] to-[#828CC6]",
     },
     {
       id: 3,
-      title: "Stationery Set",
-      price: "₹799",
+      title: "Bottles",
+      price: "₹145",
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/d26a1565d368feb36e734b386f25397d5283a025?width=692",
       gradient: "from-[#F3B1A8] to-[#828CC6]",
     },
     {
       id: 4,
-      title: "Water Bottle",
-      price: "₹399",
+      title: "Mugs",
+      price: "₹60",
       image:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/bcb62f93a79e878e61e72bca7e2d013e3fe2d2e7?width=956",
       gradient: "from-[#F3B1A8] to-[#828CC6]",
@@ -52,7 +51,7 @@ const Accessories = () => {
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/283de88197cb24f69dcbe1739e270c8b0af4a0aa?width=762"
           alt="Accessories Hero"
-          className="w-[160px] h-[160px] sm:w-[350px] sm:h-[350px] object-cover rounded-lg transition-transform duration-500 hover:scale-105 z-10 relative"
+          className="w-[200px] h-[200px] sm:w-[350px] sm:h-[350px] object-contain z-10 relative"
         />
       </section>
 
@@ -64,120 +63,40 @@ const Accessories = () => {
             <div className="bg-[#FFF4DF] shadow-[0px_0px_16px_rgba(0,0,0,0.25)]">
               <div
                 className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
-                onClick={() =>
-                  setOpenDropdown(openDropdown === "Apparel" ? null : "Apparel")
-                }
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  setTimeout(() => navigate("/apparel"), 300);
+                }}
               >
-                <span
-                  className="text-black font-poppins text-xl cursor-pointer hover:underline"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate("/apparel");
-                  }}
-                >
+                <span className="text-black font-poppins text-xl cursor-pointer">
                   Apparel
                 </span>
-                <ChevronDown
-                  className={`w-9 h-9 text-black transition-transform ${openDropdown === "Apparel" ? "rotate-180" : "rotate-0"}`}
-                />
               </div>
-              {openDropdown === "Apparel" && (
-                <>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      T-Shirts
-                    </span>
-                  </div>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Hoodies
-                    </span>
-                  </div>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Polo Shirts
-                    </span>
-                  </div>
-                </>
-              )}
             </div>
             {/* Trophy & Memento Category */}
             <div className="bg-[#FFF4DF]">
               <div
                 className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
-                onClick={() =>
-                  setOpenDropdown(openDropdown === "Trophy" ? null : "Trophy")
-                }
+                onClick={() => navigate("/trophies")}
               >
-                <span
-                  className="text-black font-poppins text-xl cursor-pointer hover:underline"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate("/trophies");
-                  }}
-                >
+                <span className="text-black font-poppins text-xl cursor-pointer">
                   Trophy & Memento
                 </span>
-                <ChevronDown
-                  className={`w-9 h-9 text-black transition-transform ${openDropdown === "Trophy" ? "rotate-180" : "rotate-0"}`}
-                />
               </div>
-              {openDropdown === "Trophy" && (
-                <>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Glass Trophies
-                    </span>
-                  </div>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Metal Awards
-                    </span>
-                  </div>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Crystal Awards
-                    </span>
-                  </div>
-                </>
-              )}
             </div>
             {/* Accessories Category */}
             <div className="bg-[#FFF4DF]">
               <div
                 className="flex items-center justify-between px-5 py-3 bg-[#FFF4DF] cursor-pointer"
-                onClick={() =>
-                  setOpenDropdown(
-                    openDropdown === "Accessories" ? null : "Accessories",
-                  )
-                }
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  setTimeout(() => navigate("/accessories"), 300);
+                }}
               >
-                <span className="text-black font-poppins text-xl">
+                <span className="text-black font-poppins text-xl cursor-pointer">
                   Accessories
                 </span>
-                <ChevronDown
-                  className={`w-9 h-9 text-black transition-transform ${openDropdown === "Accessories" ? "rotate-180" : "rotate-0"}`}
-                />
               </div>
-              {openDropdown === "Accessories" && (
-                <>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Notebooks
-                    </span>
-                  </div>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Mugs
-                    </span>
-                  </div>
-                  <div className="bg-[#FFF4DF] px-14 py-3">
-                    <span className="text-black font-poppins text-lg font-light">
-                      Stationery
-                    </span>
-                  </div>
-                </>
-              )}
             </div>
             {/* Product Grid for mobile: show below dropdown */}
             <div className="block lg:hidden mt-6">
@@ -198,11 +117,11 @@ const Accessories = () => {
                       />
                     </div>
                     <div className="p-2 pt-4 flex flex-col items-center justify-center w-full">
-                      <span className="text-gray-400 font-inter text-base font-medium mb-1 text-center truncate w-full">
-                        Product Name
+                      <span className="text-black font-inter text-base font-medium mb-1 text-center truncate w-full">
+                        {product.title}
                       </span>
-                      <span className="text-gray-300 font-inter text-base font-semibold text-center">
-                        Price
+                      <span className="text-[#211278] font-inter text-base font-semibold text-center">
+                        {product.price}
                       </span>
                     </div>
                   </div>
@@ -235,11 +154,11 @@ const Accessories = () => {
                     />
                   </div>
                   <div className="p-4 pt-4 flex flex-col items-center justify-center w-full">
-                    <span className="text-gray-400 font-inter text-base sm:text-lg font-medium mb-2 text-center truncate w-full">
-                      Product Name
+                    <span className="text-black font-inter text-base sm:text-lg font-medium mb-2 text-center truncate w-full">
+                      {product.title}
                     </span>
-                    <span className="text-gray-300 font-inter text-base sm:text-lg font-semibold text-center">
-                      Price
+                    <span className="text-[#211278] font-inter text-base sm:text-lg font-semibold text-center">
+                      {product.price}
                     </span>
                   </div>
                 </div>

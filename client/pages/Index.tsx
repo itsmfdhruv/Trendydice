@@ -91,7 +91,10 @@ const Index = () => {
       <HeroSection />
 
       {/* Customized Event Partnerships */}
-      <section className="py-16 bg-[#FFF4DF]">
+      <section
+        id="customized-event-partnerships"
+        className="py-16 bg-[#FFF4DF]"
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-[133px]">
           <div className="text-center mb-11">
             <h2 className="text-black font-poppins text-2xl sm:text-3xl lg:text-[48px] font-normal max-w-[808px] mx-auto leading-tight">
@@ -115,15 +118,15 @@ const Index = () => {
                 </h3>
                 <p className="text-black font-poppins text-base sm:text-lg md:text-xl font-light leading-normal text-justify">
                   Empower your college fest or event with Trendydice's
-                  customized merchandise solutions—crafted to your exact needs.
-                  From apparel to trophies and accessories, we deliver
+                  customized merchandise sdpolutions—crafted to your exact
+                  needs. From apparel to trophies and accessories, we deliver
                   high-quality, personalized products that make every event
                   memorable and uniquely yours.
                 </p>
               </div>
 
               <Link
-                to="/contact"
+                to="/apparel"
                 className="inline-flex items-center justify-center px-11 py-2.5 bg-gradient-to-b from-black to-[#211278] text-white font-poppins text-xl font-medium rounded-[14px] shadow-[0px_0px_16px_rgba(0,0,0,0.40)] hover:shadow-lg transition-all"
               >
                 Explore
@@ -134,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Categories */}
-      <section className="py-16 bg-[#FFF4DF]">
+      <section id="categories-section" className="py-16 bg-[#FFF4DF]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-[157px]">
           <div className="text-center mb-14">
             <h2 className="text-black font-poppins text-2xl sm:text-3xl lg:text-[48px] font-normal">
@@ -296,19 +299,88 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-[#FFF4DF]">
+      <section id="faqs-section" className="py-16 bg-[#FFF4DF]">
         <div className="max-w-6xl mx-auto px-6 lg:px-[146px]">
-          <div className="text-center mb-4">
+          <div className="text-center mb-8">
             <h2 className="text-black font-poppins text-2xl sm:text-3xl lg:text-[48px] font-normal">
               FAQ's
             </h2>
           </div>
-
-          <div className="space-y-4">
-            <div className="h-[57px] bg-[#D9D9D9] rounded"></div>
-            <div className="h-[57px] bg-[#D9D9D9] rounded"></div>
-            <div className="h-[57px] bg-[#D9D9D9] rounded"></div>
-            <div className="h-[57px] bg-[#D9D9D9] rounded"></div>
+          <div className="space-y-8">
+            <div className="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.07)] p-6">
+              <h3 className="text-[#211278] font-poppins text-lg sm:text-xl font-semibold mb-2">
+                1. What is the minimum order quantity (MOQ) for bulk orders?
+              </h3>
+              <p className="text-black font-poppins text-base sm:text-lg">
+                There’s no strict MOQ at TrendyDice. We cater to both small
+                teams and large-scale requirements with flexible order sizes.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.07)] p-6">
+              <h3 className="text-[#211278] font-poppins text-lg sm:text-xl font-semibold mb-2">
+                2. What fabrics do you use, and are they print-friendly?
+              </h3>
+              <p className="text-black font-poppins text-base sm:text-lg">
+                We primarily use 100% cotton (bio-washed), poly-cotton blends,
+                and 100% polyester — all optimized for high-quality DTG, DTF,
+                screen printing, and sublimation. Need something specific? We
+                also offer custom fabric sourcing.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.07)] p-6">
+              <h3 className="text-[#211278] font-poppins text-lg sm:text-xl font-semibold mb-2">
+                3. How long does it take to deliver a bulk customized order?
+              </h3>
+              <p className="text-black font-poppins text-base sm:text-lg">
+                Delivery timelines vary based on customization. Plain stock
+                orders can be shipped in as little as 4 hours, while fully
+                customized bulk orders may take up to 15 days. We balance speed
+                with quality at every step.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.07)] p-6">
+              <h3 className="text-[#211278] font-poppins text-lg sm:text-xl font-semibold mb-2">
+                4. Do you provide support for sample orders before bulk
+                confirmation?
+              </h3>
+              <p className="text-black font-poppins text-base sm:text-lg">
+                Yes, we offer paid sample orders so you can check fabric, fit,
+                and print quality before going bulk. We can send individual
+                pieces or curated sample kits based on your needs.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.07)] p-6">
+              <h3 className="text-[#211278] font-poppins text-lg sm:text-xl font-semibold mb-2">
+                5. What quality control measures do you have in place?
+              </h3>
+              <p className="text-black font-poppins text-base sm:text-lg">
+                Our multi-stage QC process covers fabric inspection, print
+                validation, stitching accuracy, and packaging checks. Every
+                order is reviewed by a dedicated QC team to ensure consistency
+                and reliability.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.07)] p-6">
+              <h3 className="text-[#211278] font-poppins text-lg sm:text-xl font-semibold mb-2">
+                6. Do you offer pan-India delivery?
+              </h3>
+              <p className="text-black font-poppins text-base sm:text-lg">
+                Yes, we deliver across India — from metros to remote campuses.
+                Our logistics partners ensure safe, on-time delivery to your
+                doorstep, no matter where you’re located.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.07)] p-6">
+              <h3 className="text-[#211278] font-poppins text-lg sm:text-xl font-semibold mb-2">
+                7. Can we get size-wise packing for easy distribution?
+              </h3>
+              <p className="text-black font-poppins text-base sm:text-lg">
+                Absolutely. All bulk orders are packed{" "}
+                <span className="font-semibold">size-wise and labeled</span>, so
+                your distribution is quick, organized, and hassle-free — no need
+                to sort manually.
+              </p>
+            </div>
           </div>
         </div>
       </section>
