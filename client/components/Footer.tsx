@@ -84,7 +84,7 @@ const Footer = () => {
               <a
                 href="/#faqs-section"
                 className="block text-black font-poppins text-base hover:text-[#211278] transition-colors"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   if (window.location.pathname === "/") {
                     const faqSection = document.getElementById("faqs-section");
