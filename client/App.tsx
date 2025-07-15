@@ -28,31 +28,33 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <AnnouncementBar />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/apparel" element={<Apparel />} />
-          <Route path="/accessories" element={<Accessories />} />
-          <Route path="/trophies" element={<Trophies />} />
-          <Route path="/bulk-tshirt" element={<BulkTshirt />} />
-          <Route path="/printing" element={<Printing />} />
-          <Route path="/sports-tshirt" element={<SportsTshirt />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />
-          <Route
-            path="/terms-and-conditions"
-            element={<TermsAndConditions />}
-          />
-          <Route
-            path="/delivery-and-billing"
-            element={<DeliveryAndBilling />}
-          />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="overflow-x-hidden min-h-screen">
+          <AnnouncementBar />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/apparel" element={<Apparel />} />
+            <Route path="/accessories" element={<Accessories />} />
+            <Route path="/trophies" element={<Trophies />} />
+            <Route path="/bulk-tshirt" element={<BulkTshirt />} />
+            <Route path="/printing" element={<Printing />} />
+            <Route path="/sports-tshirt" element={<SportsTshirt />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
+            <Route
+              path="/terms-and-conditions"
+              element={<TermsAndConditions />}
+            />
+            <Route
+              path="/delivery-and-billing"
+              element={<DeliveryAndBilling />}
+            />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
