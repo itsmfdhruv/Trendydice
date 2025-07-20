@@ -79,6 +79,7 @@ export const HeroSection: React.FC = () => {
             <img
               src={aboutUsImage}
               alt="Trendy hoodie merchandise"
+              loading="lazy"
               className="w-60 sm:w-72 md:w-80 lg:w-96 h-auto object-cover rounded-lg transition-transform duration-500 hover:scale-105"
             />
           </div>
