@@ -31,7 +31,6 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <div className="overflow-x-hidden min-h-screen">
-            <AnnouncementBar />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
