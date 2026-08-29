@@ -1,5 +1,5 @@
 {
-  "name": "fusion-starter",
+  "name": "trendydice-portfolio",
   "private": true,
   "type": "module",
   "pkg": {
@@ -10,7 +10,7 @@
       "dist/server/**/*.js"
     ]
   },
-  "homepage": "https://itsmfdhruv.github.io/Trendydice/",
+  "homepage": "https://github.com/itsmfdhruv/Trendydice",
   "scripts": {
     "dev": "vite",
     "build": "npm run build:client && npm run build:server",
@@ -22,7 +22,7 @@
     "typecheck": "tsc",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist/spa",
-    "postbuild": "cp dist/spa/index.html dist/spa/404.html"
+    "postbuild": "node -e \"const fs=require('fs'); const src='dist/spa/index.html'; const dest='dist/spa/404.html'; fs.copyFileSync(src, dest);\""
   },
   "dependencies": {
     "express": "^4.18.2",
